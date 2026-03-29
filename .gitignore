@@ -1,0 +1,18 @@
+.DS_Store
+
+# Backend
+BE/.env
+BE/.venv
+BE/__pycache__/
+BE/**/*.pyc
+
+# Frontend
+FE/node_modules/
+FE/.next/
+FE/out/
+FE/.env*
+
+# IDE
+.vscode/
+.idea/
+

@@ -1,0 +1,24 @@
+services:
+  be:
+    build:
+      context: ./BE
+    env_file:
+      - ./BE/.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./BE:/app
+    command: ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+  fe:
+    build:
+      context: ./FE
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_WS_URL=ws://localhost:8000/ws
+    volumes:
+      - ./FE:/app
+      - /app/node_modules
+    command: ["npm", "run", "dev", "--", "--hostname", "0.0.0.0", "--port", "3000"]
+
