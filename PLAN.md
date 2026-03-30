@@ -14,14 +14,15 @@ This project proves you understand real-time communication, streaming data, and 
 # Requirements
 
 ## Pre-step
-[ ] Create the project structure and add all needed dependencies
+[X] Create the project structure and add all needed dependencies
 
 ## Step 1: Backend WebSocket Implementation
 
- - [ ] Create a simple WebSocket endpoint using FastAPI that accepts user inputs (start from src/routes/v1/endpoints.py)
- - [ ] For each user input, generate a response using ChatGPT
- - [ ] Send the generated response back to the client over the WebSocket
- - [ ] Implement proper error handling and connection management
+ - [X] Create a simple WebSocket endpoint using FastAPI that accepts user inputs (start from src/routes/v1/endpoints.py)
+ - [X] For each user input, generate a response using ChatGPT
+ - [X] Send the generated response back to the client over the WebSocket
+ - [X] Implement proper error handling and connection management
+ - [X] Create tests to check the implemented functionality
 
 ## Step 2: Chat Interface Implementation
 
