@@ -2,7 +2,7 @@ import json
 
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 
-from src.helpers import openai_chat
+from src.helpers import gemini_chat
 from src.utils.connection_manager import ConnectionManager
 
 router = APIRouter()
@@ -56,7 +56,7 @@ async def chat_websocket(websocket: WebSocket) -> None:
                 {"type": "user_message_received", "message": user_message},
             )
             try:
-                ai_response = await openai_chat.generate_chat_response(user_message)
+                ai_response = await gemini_chat.generate_chat_response(user_message)
             except Exception:
                 print("Failed to generate AI response for message: ", user_message)
                 await manager.send_json(

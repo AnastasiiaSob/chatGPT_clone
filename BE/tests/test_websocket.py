@@ -10,7 +10,7 @@ def test_websocket_success_flow(monkeypatch):
     async def mock_generate_chat_response(user_message: str) -> str:
         return f"echo:{user_message}"
 
-    monkeypatch.setattr(endpoints.openai_chat, "generate_chat_response", mock_generate_chat_response)
+    monkeypatch.setattr(endpoints.gemini_chat, "generate_chat_response", mock_generate_chat_response)
 
     client = TestClient(app)
     with client.websocket_connect("/api/v1/ws") as websocket:
@@ -31,7 +31,7 @@ def test_websocket_empty_message_validation(monkeypatch):
     async def mock_generate_chat_response(user_message: str) -> str:
         return f"echo:{user_message}"
 
-    monkeypatch.setattr(endpoints.openai_chat, "generate_chat_response", mock_generate_chat_response)
+    monkeypatch.setattr(endpoints.gemini_chat, "generate_chat_response", mock_generate_chat_response)
 
     client = TestClient(app)
     with client.websocket_connect("/api/v1/ws") as websocket:
@@ -53,7 +53,7 @@ def test_websocket_generation_failure(monkeypatch):
     async def mock_generate_chat_response(_user_message: str) -> str:
         raise RuntimeError("upstream failed")
 
-    monkeypatch.setattr(endpoints.openai_chat, "generate_chat_response", mock_generate_chat_response)
+    monkeypatch.setattr(endpoints.gemini_chat, "generate_chat_response", mock_generate_chat_response)
 
     client = TestClient(app)
     with client.websocket_connect("/api/v1/ws") as websocket:

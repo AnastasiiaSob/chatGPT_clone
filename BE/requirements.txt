@@ -2,6 +2,6 @@ fastapi>=0.110
 uvicorn[standard]>=0.27
 python-dotenv>=1.0
 pydantic-settings>=2.2
-openai>=1.30
+google-genai>=0.8
 pytest>=8.0
 

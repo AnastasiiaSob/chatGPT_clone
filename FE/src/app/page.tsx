@@ -4,8 +4,10 @@ export default function HomePage() {
       <div className="card">
         <h1>ChatGPT Clone</h1>
         <p>
-          Frontend scaffold is ready. Next steps will implement the chat UI and
-          WebSocket connection.
+          Go to the chat page:{" "}
+          <a href="/chat" style={{ textDecoration: "underline" }}>
+            /chat
+          </a>
         </p>
       </div>
     </main>

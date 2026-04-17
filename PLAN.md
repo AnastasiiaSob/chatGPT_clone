@@ -26,11 +26,11 @@ This project proves you understand real-time communication, streaming data, and 
 
 ## Step 2: Chat Interface Implementation
 
-- [ ] Create a responsive chat UI with a clean and modern design
-- [ ] Implement a main chat panel where user and AI messages are displayed
-- [ ] Add input controls for users to submit messages
-- [ ] Connect to the WebSocket endpoint to send user inputs and receive AI responses
-- [ ] Display AI responses in real-time as they arrive from the backend 
+- [X] Create a responsive chat UI with a clean and modern design
+- [X] Implement a main chat panel where user and AI messages are displayed
+- [X] Add input controls for users to submit messages
+- [X] Connect to the WebSocket endpoint to send user inputs and receive AI responses
+- [X] Display AI responses in real-time as they arrive from the backend 
 
 ## Step 3: Response Visualization
 
